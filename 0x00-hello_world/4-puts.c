@@ -5,6 +5,9 @@
  */
 int main(void)
 {
+	/**
+	 * Description: main function of C program
+	 */
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
