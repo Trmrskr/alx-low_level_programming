@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main function to print a string using puts()
+ * main - entry point to the program
+ * Description - function to print a string using puts()
  * returns zero on success
  */
 
