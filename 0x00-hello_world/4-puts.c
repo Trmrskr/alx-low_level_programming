@@ -3,7 +3,7 @@
 /**
  * main - entry point to the program
  * Description - function to print a string using puts()
- * return - zero on success
+ * Return - zero on success
  */
 
 int main(void)
