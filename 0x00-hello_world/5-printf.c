@@ -1,5 +1,6 @@
 #include <stdio.h>
-/*main - entry point of the program
+/**
+ *main - entry point of the program
  *return (0) - returns zero on success
  */
 int main(void)
