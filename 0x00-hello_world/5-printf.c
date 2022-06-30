@@ -1,7 +1,7 @@
 #include <stdio.h>
 /*
  *Description
- * */
+ */
 int main(void)
 {
 	/*Description*/
