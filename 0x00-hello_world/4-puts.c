@@ -2,7 +2,7 @@
 
 /**
  * main - entry point to the program
- * Description - function to print a string using puts()
+ * Description: function to print a string using puts()
  * Return - zero on success
  */
 
