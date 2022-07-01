@@ -4,19 +4,19 @@
  * main - Entry point of the program.
  * Return: 0 if successful.
  */
- 
+
 int main(void)
 {
 	int alphabet = 'a';
 
-	while(alphabet <= 'z')
+	while (alphabet <= 'z')
 	{
 		putchar(alphabet);
 		alphabet = alphabet + 1;
 
 	}
 	alphabet = 'A';
-	while(alphabet <= 'Z')
+	while (alphabet <= 'Z')
 	{
 		putchar(alphabet);
 		alphabet = alphabet + 1;
