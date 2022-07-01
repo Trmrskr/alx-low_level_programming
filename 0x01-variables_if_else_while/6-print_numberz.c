@@ -11,7 +11,7 @@ int main(void)
 
 	while (single_digit_number < 10)
 	{
-		putchar(single_digit_number);
+		putchar((char)single_digit_number);
 		single_digit_number += 1;
 	}
 	putchar('\n');
