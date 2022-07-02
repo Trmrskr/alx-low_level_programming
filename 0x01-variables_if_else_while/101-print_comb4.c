@@ -18,7 +18,7 @@ int main(void)
 
 		if ((hundredth_digit < tenth_digit) && (hundredth_digit < unit_digit))
 		{
-			if(tenth_digit < unit_digit)
+			if (tenth_digit < unit_digit)
 			{
 				putchar(hundredth_digit + '0');
 				putchar(tenth_digit + '0');
