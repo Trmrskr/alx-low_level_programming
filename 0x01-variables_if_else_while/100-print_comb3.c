@@ -19,6 +19,7 @@ int main(void)
 		{
 			putchar(first_digit + '0');
 			putchar(last_digit + '0');
+
 			if (i != 89)
 			{
 				putchar(',');
