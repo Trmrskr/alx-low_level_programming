@@ -7,11 +7,12 @@
 
 int main(void)
 {
-	int i, j;
+	int i = 0, j;
 
-	for (i = 0; i < 100; i++)
+	while (i < 100)
 	{
-		for (j = 0; j < 100; j++)
+		j = 0;
+		while (j < 100)
 		{
 			int i_1st_digit, i_2nd_digit, j_1st_digit, j_2nd_digit;
 
@@ -34,7 +35,9 @@ int main(void)
 					putchar(' ');
 				}
 			}
+			j++;
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);
