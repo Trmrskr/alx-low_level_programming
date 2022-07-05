@@ -2,7 +2,7 @@
 
 /**
  * print_alphabet_x10 - prints all lower case alphabet 10 times
- * Return: 0
+ * Return: void
  */
 
 void print_alphabet_x10(void)
@@ -11,8 +11,13 @@ void print_alphabet_x10(void)
 
 	while (i <= 10)
 	{
-		print_alphabet();
+		char alpha = 'a';
+		while (alpha <= 'z')
+		{
+			_putchar(alpha);
+			alpha++;
+		}
 		i++;
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
