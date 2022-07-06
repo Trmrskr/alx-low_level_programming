@@ -8,21 +8,18 @@
 
 int main(void)
 {
-	long int num_1 = 1, num_2 = 2, i = 2, nxt, sum = num_2;
+	int num_1 = 1, num_2 = 2, nxt = 0, sum = num_2;
 
-	while (i < 4000000)
+	while (nxt <= 4000000)
 	{
 		nxt = num_1 + num_2;
 		num_1 = num_2;
 		num_2 = nxt;
 
 		if (nxt % 2 == 0)
-		{
 			sum += nxt;
-		}
-		i++;
 	}
-	printf("%ld\n", sum);
+	printf("%i\n", sum);
 
 	return (0);
 }
