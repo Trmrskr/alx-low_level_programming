@@ -54,13 +54,15 @@ void print_to_98(int n)
 void print_digits(int n)
 {
 
-	int num = n, first_dgt, mid_dgt, last_dgt = n % 10;
+	int num = n, first_dgt, mid_dgt, last_dgt;
 
 	if (n < 0)
 	{
 		num = -n;
 		_putchar('-');
 	}
+
+	last_dgt = num % 10;
 
 	if (num >= 0 && num < 10)
 	{
