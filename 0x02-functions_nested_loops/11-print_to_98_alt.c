@@ -52,25 +52,23 @@ void print_to_98(int n)
 void print_digits(int n)
 {
 	int num = n;
-	int count_digit = 0, digit;
+	int ten_power = 1, digit;
 
-	while (num != 0)
+	while (num > 10)
 	{
 		num /= 10;
-		count_digit += 1;
+		ten_power *= 10;
 	}
-	if (n == 0)
+	if (n < 10)
 	{
-		count_digit = 1;
+		ten_power = 1;
 	}
 	num = n;
 
-	while (count_digit != -1)
+	while (ten_power >= 1)
 	{
-		digit = num / (int)pow((double)10, (double)count_digit);
-
+		digit = num / ten_power;
 		_putchar(digit + '0');
-		num = num % (int)pow(10, count_digit);
-		count_digit--;
+		ten_power /= 10;
 	}
 }

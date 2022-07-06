@@ -1,11 +1,12 @@
 #include "main.h"
 #include <math.h>
 
+void print_digits(int);
+
 /**
  * print_to_98 - print from any number to 98
  * @n: the integer to print from
  */
-void print_digits(int);
 
 void print_to_98(int n)
 {
@@ -14,7 +15,8 @@ void print_to_98(int n)
 		while (n <= 98)
 		{
 			print_digits(n);
-			if(n != 98){
+			if (n != 98)
+			{
 				_putchar(',');
 				_putchar(' ');
 			}
@@ -30,7 +32,7 @@ void print_to_98(int n)
 		while (n >= 98)
 		{
 			print_digits(n);
-			if(n != 98)
+			if (n != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -51,24 +53,35 @@ void print_to_98(int n)
 
 void print_digits(int n)
 {
-	int num = n;
-	int ten_power = 1, digit;
 
-	while (num > 10)
-	{
-		num /= 10;
-		ten_power *= 10;
-	}
-	if (n < 10)
-	{
-		ten_power = 1;
-	}
-	num = n;
+	int num = n, first_dgt, mid_dgt, last_dgt = n % 10;
 
-	while (ten_power >= 1)
+	if (n < 0)
 	{
-		digit = num / ten_power;
-		_putchar(digit + '0');
-		ten_power /= 10;
+		num = -n;
+		_putchar('-');
+	}
+
+	if (num >= 0 && num < 10)
+	{
+		_putchar(num + '0');
+	}
+	else if (num >= 10 && num < 100)
+	{
+		first_dgt = num / 10;
+		_putchar(first_dgt + '0');
+		_putchar(last_dgt + '0');
+	}
+	else if (num >= 100 && num < 1000)
+	{
+		first_dgt = num / 100;
+		mid_dgt = (num / 10) % 10;
+		_putchar(first_dgt + '0');
+		_putchar(mid_dgt + '0');
+		_putchar(last_dgt + '0');
+	}
+	else
+	{
+		return;
 	}
 }
