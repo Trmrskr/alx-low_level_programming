@@ -5,9 +5,10 @@
  *
  * Return: 0 if successful
  */
+
 int main(void)
 {
-	int i = 3, int sum;
+	int i = 3, sum;
 
 	while (i < 1024)
 	{
