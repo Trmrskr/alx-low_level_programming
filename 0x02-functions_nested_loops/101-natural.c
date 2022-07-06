@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int i = 3, sum;
+	int i = 3, sum = 0;
 
 	while (i < 1024)
 	{
@@ -17,6 +17,7 @@ int main(void)
 			sum += i;
 		}
 	}
+
 	printf("%d", sum);
 	return (0);
 }
