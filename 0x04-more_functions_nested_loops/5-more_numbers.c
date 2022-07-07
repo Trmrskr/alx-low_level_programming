@@ -11,6 +11,7 @@ void more_numbers(void)
 	while (i < 10)
 	{
 		int first_digit, last_digit;
+
 		j = 0;
 		while (j < 15)
 		{
