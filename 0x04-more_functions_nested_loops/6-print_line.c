@@ -2,6 +2,7 @@
 
 /**
  * print_line - print a straight line
+ * @n: argument
  */
 
 void print_line(int n)
