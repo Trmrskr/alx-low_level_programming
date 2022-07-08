@@ -19,16 +19,21 @@ void print_diagonal(int n)
 				if (i == j)
 				{
 					_putchar('\\');
+					if (j != n)
+					{
+						_putchar('\n');
+					}
+					break;
 				}
 				else
 				{
 					_putchar(' ');
 				}
 				j++;
+
 			}
 			i++;
-			_putchar('\n');
 		}
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
