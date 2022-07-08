@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line - print a straight line
+ * print_square - print a straight line
  * @n: argument
  */
 
