@@ -5,7 +5,7 @@
  * @n: number as argument
  */
 
-void print_number(long long  int n)
+void print_number(long int n)
 {
 	int num = n, tenth_power = 1;
 
