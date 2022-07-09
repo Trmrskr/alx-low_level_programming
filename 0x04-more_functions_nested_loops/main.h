@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int _putchar(int);
+void _putchar(char);
 
 int _isupper(int);
 
@@ -23,6 +23,6 @@ void print_square(int);
 
 void print_triangle(int);
 
-void print_number(int);
+void print_number(long int);
 
 #endif

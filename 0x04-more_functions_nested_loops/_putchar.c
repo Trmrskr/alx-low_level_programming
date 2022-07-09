@@ -5,8 +5,7 @@
  * Return: 0 if successful
  */
 
-int _putchar (char c)
+void _putchar (int c)
 {
 	write(1, &c, 1);
-	return 0;
 }
