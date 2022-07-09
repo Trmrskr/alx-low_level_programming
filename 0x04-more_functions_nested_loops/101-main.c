@@ -8,10 +8,12 @@
 
 int main(void)
 {
-	print_number(9833929020);
+	print_number(833929020);
 	_putchar('\n');
-	print_number(-9893882813);
+	print_number(-893882813);
 	_putchar('\n');
+/*	print_number(612852475143);
+	_putchar('\n');*/
 	print_number(1024);
 	_putchar('\n');
 	print_number(0);

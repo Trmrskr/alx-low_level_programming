@@ -3,6 +3,7 @@
 /**
  * print_number - print digits of a number
  * @n: number as argument
+ * Return: void
  */
 
 void print_number(int n)
@@ -31,4 +32,5 @@ void print_number(int n)
 		tenth_power /= 10;
 		_putchar(digits + '0');
 	}
+
 }
