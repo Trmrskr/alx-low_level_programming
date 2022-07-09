@@ -5,9 +5,9 @@
  * @n: number as argument
  */
 
-void print_number(long int n)
+void print_number(int n)
 {
-	long int num = n;
+	unsigned int num = n;
 	int tenth_power = 1;
 
 	if (n < 0)
