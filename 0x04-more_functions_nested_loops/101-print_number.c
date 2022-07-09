@@ -7,7 +7,8 @@
 
 void print_number(long int n)
 {
-	int num = n, tenth_power = 1;
+	long int num = n;
+	int tenth_power = 1;
 
 	if (n < 0)
 	{
