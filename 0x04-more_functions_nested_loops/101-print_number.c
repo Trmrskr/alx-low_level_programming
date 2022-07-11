@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_number - print digits of a number
@@ -9,12 +10,12 @@
 void print_number(int n)
 {
 	unsigned int num = n;
+	unsigned int num_1 = n;
 	int tenth_power = 1;
 
 	if (n < 0)
 	{
-		num = -n;
-		n = -n;
+		num = num_1 = -1 * n;
 		_putchar('-');
 	}
 
@@ -26,9 +27,9 @@ void print_number(int n)
 
 	while (tenth_power >= 1)
 	{
-		int digits = n / tenth_power;
+		int digits = num_1 / tenth_power;
 
-		n = n % tenth_power;
+		num_1 = num_1 % tenth_power;
 		tenth_power /= 10;
 		_putchar(digits + '0');
 	}
