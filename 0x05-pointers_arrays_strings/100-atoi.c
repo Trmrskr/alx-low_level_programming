@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * _atoi - convert string to numbers
  * @s: string to be converted.
@@ -8,6 +6,6 @@
 
 int _atoi(char *s)
 {
-	int num = 98;
+	int num = *s;
 	return num;
 }
