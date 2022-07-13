@@ -1,11 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 
-int main(void)
+/**
+ * _atoi - convert string to numbers
+ * @s: string to be converted.
+ * Return: number
+ */
+
+int _atoi(char *)
 {
-	int first_digit = 9;
-	int second_digit = 8;
-	putchar(first_digit + '0');
-	putchar(second_digit + '0');
-	putchar('\n');
-	return (0);
+	int num = 98;
+	return num;
 }
