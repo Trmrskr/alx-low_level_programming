@@ -6,6 +6,6 @@
 
 int _atoi(char *s)
 {
-	int num = *s;
+	int num = *s + '0';
 	return num;
 }
