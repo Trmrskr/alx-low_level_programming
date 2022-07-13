@@ -6,7 +6,7 @@
  * Return: number
  */
 
-int _atoi(char *)
+int _atoi(char *s)
 {
 	int num = 98;
 	return num;
