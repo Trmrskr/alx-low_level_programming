@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * _strcat - returns concatenated string.
  * @dest: destination string
@@ -13,7 +11,7 @@ char *_strcat(char *dest, char *src)
 
 	while (dest[i++])
 		len++;
-	
+
 	i = 0;
 
 	while (src[i])
