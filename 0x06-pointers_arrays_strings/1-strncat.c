@@ -1,11 +1,12 @@
+int _strlen(char *);
+
 /**
  * _strncat - function to concatenate two strings
  * @dest: destination string
  * @src: source string
  * @n: bytes to be used from source string
+ * Return: destination
  */
-
-int _strlen(char *);
 
 char *_strncat(char *dest, char *src, int n)
 {
@@ -23,6 +24,7 @@ char *_strncat(char *dest, char *src, int n)
 /**
  * _strlen - function to calculate the length of a string
  * @s: string whose length is to be calculated
+ * Return: length
  */
 
 int _strlen(char *s)
