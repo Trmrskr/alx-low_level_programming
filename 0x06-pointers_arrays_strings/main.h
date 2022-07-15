@@ -17,4 +17,6 @@ char *cap_string(char *);
 
 char *leet(char *);
 
+void print_number(int);
+
 #endif
