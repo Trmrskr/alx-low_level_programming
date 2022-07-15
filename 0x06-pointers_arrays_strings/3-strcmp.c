@@ -1,28 +1,20 @@
-int _strlen(char *);
-
 /**
- * _strncpy - function to copies a strings
- * @dest: destination string
- * @src: source string
- * @n: bytes to be used from source string
+ * _strcmp - function to compare two strings
+ * @s1: first string
+ * @s2: second string
  * Return: destination
  */
 
-char *_strncpy(char *dest, char *src, int n)
+int *_strcmp(char *s1, char *s2)
 {
 	int i = 0;
 
-	while (i < n && src[i] != '\0')
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (s1[i] != s2[i])
+			break;
 		i++;
 	}
-
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-
-	return (dest);
+	
+	return *((int)s1[i] - (int)s2[i]);
 }
