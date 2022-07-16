@@ -21,4 +21,6 @@ char *leet(char *);
 
 void print_number(int);
 
+char *rot13(char *);
+
 #endif
