@@ -6,31 +6,21 @@
 
 char *rot13(char *str)
 {
-	int i = 0, j;
-	char upper_alpha[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
-'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
-'Y', 'Z'};
-	char lower_alpha[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
-'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
-'y', 'z'};
-	int alpha_size = 26;
+	int i = 0;
 
 	while (str[i] != '\0')
 	{
-		j = 0;
-		while (j < alpha_size)
+		while ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
 		{
-			if (str[i] == lower_alpha[j])
+			if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
 			{
-				str[i] = lower_alpha[(j + 13) % 26];
-				break;
+				str[i] += 13;
 			}
-			else if (str[i] == upper_alpha[j])
+			else
 			{
-				str[i] = upper_alpha[(j + 13) % 26];
-				break;
+				str[i] -= 13;
 			}
-			j++;
+			i++;
 		}
 		i++;
 	}
