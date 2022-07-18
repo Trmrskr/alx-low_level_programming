@@ -23,4 +23,6 @@ void print_number(int);
 
 char *rot13(char *);
 
+char *infinite_add(char *, char *, char *, int);
+
 #endif
