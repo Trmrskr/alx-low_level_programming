@@ -3,6 +3,7 @@
  * @dest: destination buffer
  * @src: source buffer
  * @n: number of byte to copy from source buffer
+ * Return: destination buffer
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
@@ -15,5 +16,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		dest++;
 		i++;
 	}
-	return dest;
+	return (dest);
 }
