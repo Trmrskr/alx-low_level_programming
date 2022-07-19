@@ -13,8 +13,8 @@ char *_strstr(char *haystack, char *needle)
 
 	int i = 0, j, k;
 
-	if (!(*haystack) || !(*needle))
-		return (0);
+	if (!*needle)
+		return (haystack);
 
 	while ((h_len - i >= n_len) && *haystack && *needle)
 	{
@@ -37,6 +37,7 @@ char *_strstr(char *haystack, char *needle)
 			if (w_found)
 				return (haystack + i);
 		}
+
 		i++;
 	}
 	return (0);
