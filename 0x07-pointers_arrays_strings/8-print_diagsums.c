@@ -17,8 +17,8 @@ void print_diagsums(int *a, int size)
 			if (i == j)
 			{
 				int c;
-				c = size - j - 1;
 
+				c = size - j - 1;
 				diag_sum_1 += *(a + (i * size + j));
 				diag_sum_2 += *(a + (i * size + c));
 			}
