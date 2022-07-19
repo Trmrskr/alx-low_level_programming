@@ -1,8 +1,8 @@
 int _strlen(char *);
 /**
  * _strstr - function that locates a substring
- * @haystack - the main string sto be searched
- * @needle - the string to search for
+ * @haystack: the main string sto be searched
+ * @needle: the string to search for
  * Return: a pointer to the beginning of the located substring
  */
 
@@ -15,20 +15,26 @@ char *_strstr(char *haystack, char *needle)
 
 	while ((h_len - i >= n_len) && *haystack && *needle)
 	{
-		if (haystack[i] == *needle)
+		if (*(haystack + i) == *needle)
 		{
+			int w_found = 1;
+
 			j = 0, k = i;
 			while (j < n_len)
 			{
-				if (haystack[k] != needle[j])
+				if (*(haystack + k) != *(needle + j))
+				{
+					w_found = 0;
 					break;
+				}
 				j++;
 				k++;
 			}
-			return (haystack);
+
+			if (w_found)
+				return (haystack + i);
 		}
 		i++;
-		haystack++;
 	}
 	return (0);
 }
@@ -42,10 +48,9 @@ int _strlen(char *s)
 {
 	int len = 0;
 
-	while (*s)
+	while (*(s + len))
 	{
 		len++;
-		s++;
 	}
 	return (len);
 }
