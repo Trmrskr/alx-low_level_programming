@@ -35,7 +35,7 @@ int palinity(char *s, int i, int len)
 	if (*(s + i) != *(s + len))
 		return (0);
 
-	return (palinity(s, ++i, ++len));
+	return (palinity(s, ++i, --len));
 }
 
 /**
@@ -46,12 +46,8 @@ int palinity(char *s, int i, int len)
 
 int _strlen(char *s)
 {
-	int len = 0;
+	if (!*s)
+		return (0);
 
-	while (*s)
-	{
-		len++;
-		s++;
-	}
-	return (len);
+	return (1 + _strlen(++s));
 }
