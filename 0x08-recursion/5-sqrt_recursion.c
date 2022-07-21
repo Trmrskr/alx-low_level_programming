@@ -21,7 +21,8 @@ int _sqrt_recursion(int n)
 
 /**
  * _sqrt - The recursive square root function
- * @n - The number to find square root of
+ * @n: The number to find square root of
+ * @i: An iterator
  * Return: iteration
  */
 
