@@ -5,6 +5,7 @@ int _atoi(char *s);
  * main - Program entry point
  * @argc: count of arguments
  * @argv: arguments passed to program
+ * Return: (0) on exit
  */
 
 int main(int argc, char *argv[])
@@ -24,7 +25,7 @@ int main(int argc, char *argv[])
 	{
 		if (change >= denominations[i])
 		{
-			count +=change / denominations[i];
+			count += change / denominations[i];
 			change = change % denominations[i];
 		}
 		i++;
