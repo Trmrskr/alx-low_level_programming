@@ -1,12 +1,11 @@
 #include <unistd.h>
+
 /**
- * _putchar - print character
- * @c: character to be printed
- * Return: 0 on success
+ * _putchar - prints characters
+ * @c: character to  print
  */
 
-int _putchar(char c)
+void _putchar (char c)
 {
 	write(1, &c, 1);
-	return (0);
 }

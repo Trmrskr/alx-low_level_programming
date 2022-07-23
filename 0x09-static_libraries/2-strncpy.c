@@ -1,12 +1,28 @@
+int _strlen(char *);
+
 /**
- * _strcpy - copy string
- * @dest: destination
- * @src: source
- * Return: string
+ * _strncpy - function to copies a strings
+ * @dest: destination string
+ * @src: source string
+ * @n: bytes to be used from source string
+ * Return: destination
  */
 
-char *_strcpy(char *dest, char *src)
+char *_strncpy(char *dest, char *src, int n)
 {
-	*dest = *src;
+	int i = 0;
+
+	while (i < n && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+
 	return (dest);
 }

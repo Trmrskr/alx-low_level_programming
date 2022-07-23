@@ -1,12 +1,17 @@
 /**
- * _isdigit - is digit
- * @c: digit to be checked
- * Return: 1  or 0
+ * _isdigit - check is character is a digit
+ * @c: argument
+ * Return: 1 if true, 0 otherwise
  */
 
 int _isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (c >= 48 && c <= 57)
+	{
 		return (1);
-	return (0);
+	}
+	else
+	{
+		return (0);
+	}
 }
