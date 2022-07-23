@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	num_1 = _atoi(argv[1]);
 	num_2 = _atoi(argv[2]);
-	
+
 	printf("%d\n", num_1 * num_2);
 
 	return (0);
@@ -40,6 +40,7 @@ int _atoi(char *s)
 	while (s[i])
 	{
 		int value = s[i] - '0';
+
 		sum = (sum * 10) + value;
 		i++;
 	}
