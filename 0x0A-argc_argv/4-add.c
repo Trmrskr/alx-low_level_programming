@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		int num;
-		
+
 		num = _atoi(argv[i]);
 
 		if (num == -1)
@@ -48,7 +48,7 @@ int _atoi(char *s)
 	while (s[i])
 	{
 		int value;
-		
+
 		if (!(s[i] >= '0' && s[i] <= '9'))
 			return (-1);
 
