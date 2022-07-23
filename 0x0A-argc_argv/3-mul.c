@@ -26,6 +26,11 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+/**
+ * _atoi - convert string to numbers
+ * @s: string to be converted
+ * Return: numbers
+ */
 
 int _atoi(char *s)
 {
