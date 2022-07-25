@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	if (new_str == NULL)
 		return (NULL);
 
-	for (i = 0; i <= new_str_len; i++)
+	for (i = 0; i < new_str_len; i++)
 	{
 		if (i < lens1)
 		{
@@ -40,11 +40,8 @@ char *str_concat(char *s1, char *s2)
 		{
 			new_str[i] = s2[i - lens1];
 		}
-		if (i == new_str_len)
-		{
-			new_str[i] = '\0';
-		}
 	}
+	new_str[i] = '\0';
 
 	return (new_str);
 }
