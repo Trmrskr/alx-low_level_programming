@@ -24,8 +24,6 @@ char *str_concat(char *s1, char *s2)
 	else
 		lens2 = strlen(s2);
 
-	lens1 = strlen(s1);
-	lens2 = strlen(s2);
 	new_str_len = lens1 + lens2;
 	new_str = (char *)malloc((sizeof(char) * new_str_len) + 1);
 
