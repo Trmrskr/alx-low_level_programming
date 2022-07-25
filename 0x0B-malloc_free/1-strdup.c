@@ -3,7 +3,7 @@
 int _strlen(char *);
 /**
  * _strdup - Duplicates a string and returns a pointer to the new string
- * str - string
+ * @str: string
  * Return: Address of duplicate string
  */
 
@@ -12,7 +12,10 @@ char *_strdup(char *str)
 
 	int len = _strlen(str), i = 0;
 	char *dup_str = (char *)malloc(sizeof(char) * len);
-	
+
+	if (dup_str == NULL)
+		return (NULL);
+
 	for (i = 0; i < len; i++)
 	{
 		dup_str[i] = str[i];
@@ -23,7 +26,7 @@ char *_strdup(char *str)
 /**
  * _strlen - returns the length of a string
  * @s: string which length is to be returned
- * return: integer
+ * Return: integer
  */
 
 int _strlen(char *s)
