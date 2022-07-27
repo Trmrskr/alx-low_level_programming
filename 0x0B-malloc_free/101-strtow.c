@@ -60,7 +60,7 @@ char **char_space_alloc(char *str, char **new_str)
 		{
 			char_count += 1;
 		}
-		if (word == 1 && str[i] == ' ')
+		if (word == 1 && (str[i] == ' '|| str[i + 1] == '\0'))
 		{
 			word = 0;
 			new_str[word_count] = (char *)malloc(sizeof(char) * char_count);
