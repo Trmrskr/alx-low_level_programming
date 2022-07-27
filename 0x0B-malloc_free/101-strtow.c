@@ -29,7 +29,7 @@ char **word_space_alloc(char *str)
 	}
 
 	if (word_count)
-		new_str = (char **)malloc(sizeof(char *) * word_count + 1);
+		new_str = (char **)malloc(sizeof(char *) * (word_count + 1));
 	else
 		new_str = NULL;
 
