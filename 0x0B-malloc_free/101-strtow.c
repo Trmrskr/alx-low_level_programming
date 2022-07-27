@@ -7,7 +7,6 @@
  * word_space_alloc - a function which allocates space according to
  * amount of words in a string
  * @str: string from which to get word
- * @new_str: pointer to which to allocate word space
  * Return: 0 on success, 1 otherwise
  */
 char **word_space_alloc(char *str)
@@ -29,7 +28,8 @@ char **word_space_alloc(char *str)
 		i++;
 	}
 
-	new_str = (char **)malloc(sizeof(char *) * word_count + 1);
+	if (word_count)
+		new_str = (char **)malloc(sizeof(char *) * word_count + 1);
 
 	return (new_str);
 }
