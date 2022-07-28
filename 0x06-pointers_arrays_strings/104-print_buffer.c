@@ -48,7 +48,7 @@ void print_ten_hex(char *b, int i, int size)
 			printf("  ");
 
 		if (i % 2 != 0)
-			putchar(' ');
+			printf(" ");
 
 		i++;
 	}
@@ -71,11 +71,11 @@ void print_char(char *b, int i, int size)
 			break;
 
 		if (b[i] >= 0 && b[i] <= 31)
-			putchar('.');
+			printf(".");
 		else
-			putchar(b[i]);
+			printf("%c", b[i]);
 
 		i++;
 	}
-	putchar('\n');
+	printf("\n");
 }
