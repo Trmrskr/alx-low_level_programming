@@ -64,18 +64,15 @@ void print_ten_hex(char *b, int i, int size)
 void print_char(char *b, int i, int size)
 {
 	int end = i + 9;
-
 	while (i < end)
 	{
-		if (i <= size)
-		{
-			if (b[i] >= 0 && b[i] <= 31)
-				putchar('.');
-			else
-				putchar(b[i]);
-		}
+		if (i >= size)
+			break;
+
+		if (b[i] >= 0 && b[i] <= 31)
+			putchar('.');
 		else
-			putchar(' ');
+			putchar(b[i]);
 
 		i++;
 	}
