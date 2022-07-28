@@ -69,7 +69,7 @@ void print_char(char *b, int i, int size)
 		if (i >= size)
 			break;
 
-		if (b[i] >= 0 && b[i] <= 31)
+		if ((b[i] >= 0 && b[i] <= 31) && b[i] <= 126)
 			printf(".");
 		else
 			printf("%c", b[i]);
