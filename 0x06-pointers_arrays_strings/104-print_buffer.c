@@ -15,16 +15,15 @@ void print_buffer(char *b, int size)
 	int i;
 
 	if (size <= 0)
-	{
 		putchar('\n');
-		return;
-	}
-
-	for (i = 0; i < size; i += 10)
+	else
 	{
-		printf("%08x: ", i);
-		print_ten_hex(b, i, size);
-		print_char(b, i, size);
+		for (i = 0; i < size; i += 10)
+		{
+			printf("%08x: ", i);
+			print_ten_hex(b, i, size);
+			print_char(b, i, size);
+		}
 	}
 }
 
