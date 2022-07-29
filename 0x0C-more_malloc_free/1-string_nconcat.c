@@ -12,20 +12,20 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int len_1 = strlen(s1), p_len, i;
-	unsigned int len_2 = strlen(s2);
+	int len_1 = strlen(s1), p_len, i;
+	int len_2 = strlen(s2), num = n;
 
 	if (s1 == NULL)
 		len_1 = 0;
 	if (s2 == NULL)
 		len_2 = 0;
-	if (n < 0)
+	if (num < 0)
 		return (NULL);
 
-	if (n >= len_2)
+	if (num >= len_2)
 		p_len = len_1 + len_2 + 1;
 	else
-		p_len = len_1 + n + 1;
+		p_len = len_1 + num + 1;
 
 	ptr = malloc(p_len * sizeof(*ptr));
 
