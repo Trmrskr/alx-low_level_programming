@@ -3,6 +3,7 @@
 /**
  * _calloc - allocates memory
  * @nmemb: The number of element
+ * @size: the size of byte to allocate
  * Return: pointer to new memory
  */
 
@@ -19,7 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (alloc == NULL)
 		return (NULL);
-	
+
 	buffer = alloc;
 
 	for (i = 0; i < (size * nmemb); i++)
