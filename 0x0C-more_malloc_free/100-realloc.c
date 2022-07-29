@@ -39,6 +39,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	return (res_ptr);
 }
 
+/**
+ * alloc - a subprocedure to aid the realloc function
+ * @ptr: pointer to void
+ * @old_size: the old size of allocation
+ * @new_size: the new size of allocation
+ * Return: a pointer to char
+ */
+
 char *alloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *new_ptr;
