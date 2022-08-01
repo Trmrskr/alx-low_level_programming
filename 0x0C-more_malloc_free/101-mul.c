@@ -11,6 +11,7 @@ void print_result(int *, unsigned int);
  * main - Entry point to program
  * @argc: argument count
  * @argv: argument to the program
+ * Return: 0 on success
  */
 
 int main(int argc, char *argv[])
@@ -76,12 +77,16 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 /**
  * multiply_strings - multiply two strings containing positive numbers
- * @res - a double pointer to the result pointer
+ * @res: a double pointer to the result pointer
  * @num_str1: the string representing number 1
+ * @len_1: length of num_str1
  * @num_str2: the string representing number 2
+ * @len_2: length of num_str2
+ * Return: a void pointer to our result which is a pointer to an int
  */
 
-void *multiply_strings(int *res, char *num_str1, unsigned int len_1, char *num_str2, unsigned int len_2)
+void *multiply_strings(int *res, char *num_str1, unsigned int len_1,
+char *num_str2, unsigned int len_2)
 {
 	int exp_len = (len_1 + len_2) - 1;
 	int i, j, z, l1 = len_1 - 1, l2 = len_2 - 1, sum;
@@ -133,7 +138,8 @@ int is_all_digit(char *str)
 
 /**
  * print_result - prints all the numbers in a pointer to int as characters
- * @str - pointer to int to be printed from
+ * @num_ptr: pointer to int to be printed from
+ * @exp_len: the expected length of result/output
  */
 
 void print_result(int *num_ptr, unsigned int exp_len)
