@@ -18,15 +18,17 @@ int main(int argc, char *argv[])
 {
 	int is_num1, is_num2;
 	int *res, *result;
-	unsigned int len_1 = strlen(argv[1]);
-	unsigned int len_2 = strlen(argv[2]);
-	unsigned int exp_len = len_1 + len_2;
+	unsigned int len_1, len_2, exp_len;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+
+	len_1 = strlen(argv[1]);
+	len_2 = strlen(argv[2]);
+	exp_len = len_1 + len_2;
 
 	is_num1 = is_all_digit(argv[1]);
 	is_num2 = is_all_digit(argv[2]);
@@ -42,6 +44,8 @@ int main(int argc, char *argv[])
 	result = multiply_strings(res, argv[1], len_1, argv[2], len_2);
 
 	print_result(result, exp_len);
+
+	free(result);
 
 	return (0);
 }
