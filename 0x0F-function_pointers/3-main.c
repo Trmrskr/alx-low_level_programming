@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	op = argv[2];
 	num_2 = atoi(argv[3]);
 
-	if (!get_op_func(op))
+	if (!get_op_func(op) || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
