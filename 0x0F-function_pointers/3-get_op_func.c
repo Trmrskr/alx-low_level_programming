@@ -3,9 +3,11 @@
 
 /**
  * get_op_func - a pointer to a function to add
+ * @s: string input to the function get_op_func
+ * Return: computed value on success, NULL on failure
  */
 
-int (*get_op_func(char *s))(int , int)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
