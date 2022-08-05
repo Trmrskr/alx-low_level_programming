@@ -62,30 +62,30 @@ void print_str(va_list arg)
 void print_all(const char * const format, ...)
 {
 	int len, i, j, cnt_print = 0;
-
 	opt op_feat[] = {
 		{'c', print_char},
 		{'i', print_int},
 		{'f', print_float},
 		{'s', print_str},
-		{'\0', NULL}
 	};
 	va_list args;
 
-	len = strlen(format);
+	len = format != NULL ? strlen(format) : 0;
 
 	va_start(args, format);
 	i = 0;
-	while (len && i < len)
+
+	while (i < len)
 	{
 		j = 0;
-		while (op_feat[j].op != '\0')
+		while (op_feat[j].op)
 		{
 			if (op_feat[j].op == format[i])
 			{
 				printf("%s", cnt_print != 0 ? ", " : "");
 				op_feat[j].print_variable(args);
 				cnt_print++;
+				break;
 			}
 			j++;
 		}
