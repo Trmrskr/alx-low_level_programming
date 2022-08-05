@@ -78,21 +78,16 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (i < len)
 	{
-		if (format[i] == 'c' || format[i] == 'i' || format[i] == 'f'
-|| format[i] == 's')
+		j = 0;
+		while (op_feat[j].op != '\0')
 		{
-			j = 0;
-			while (op_feat[j].op != '\0')
+			if (op_feat[j].op == format[i])
 			{
-				if (op_feat[j].op == format[i])
-				{
-					if (cnt_print != 0)
-						printf(", ");
-					op_feat[j].print_variable(args);
-					cnt_print++;
-				}
-				j++;
+				printf("%s", cnt_print != 0 ? ", " : "");
+				op_feat[j].print_variable(args);
+				cnt_print++;
 			}
+			j++;
 		}
 		i++;
 	}
