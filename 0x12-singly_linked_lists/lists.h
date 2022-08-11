@@ -1,3 +1,5 @@
+#ifndef LIST_H
+#define LIST_H
 #include <stdlib.h>
 
 /**
@@ -18,3 +20,5 @@ typedef struct list_s
 
 void _putchar(char);
 size_t print_list(const list_t *);
+
+#endif LIST_H
