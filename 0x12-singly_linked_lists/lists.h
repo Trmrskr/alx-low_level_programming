@@ -20,5 +20,6 @@ typedef struct list_s
 
 void _putchar(char);
 size_t print_list(const list_t *);
+size_t list_len(const list_t *);
 
 #endif /* LIST_H */
