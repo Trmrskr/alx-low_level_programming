@@ -1,0 +1,46 @@
+#include <stdlib.h>
+
+/**
+ * _strdup - Duplicates a string and returns a pointer to the new string
+ * @str: string
+ * Return: Address of duplicate string
+ */
+
+char *_strdup(const char *str)
+{
+	int len, i = 0;
+	char *dup_str;
+
+	if (str == NULL)
+		return (NULL);
+
+	len = _strlen(str);
+	dup_str = (char *)malloc((sizeof(char) * len) + 1);
+
+	if (dup_str == NULL)
+		return (NULL);
+
+	for (i = 0; i < len; i++)
+	{
+		dup_str[i] = str[i];
+	}
+	return (dup_str);
+}
+
+/**
+ * _strlen - returns the length of a string
+ * @s: string which length is to be returned
+ * Return: integer
+ */
+
+int _strlen(const char *s)
+{
+	int len = 0;
+
+	while (*s)
+	{
+		len++;
+		s++;
+	}
+	return (len);
+}
