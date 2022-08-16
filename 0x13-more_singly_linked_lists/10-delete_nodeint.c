@@ -34,6 +34,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		if (idx == index)
 			break;
 	}
+	if (index > idx)
+		return (-1);
+
 	temp = current_node;
 	prev_node->next = current_node->next;
 	free(temp);
