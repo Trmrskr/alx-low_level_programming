@@ -1,4 +1,5 @@
 #include <string.h>
+#include <limits.h>
 
 /**
  * binary_to_uint - a function that converts a binary number to an
@@ -31,5 +32,9 @@ unsigned int binary_to_uint(const char *b)
 		num = b[i] - '0';
 		sum += num * pow;
 	}
+
+	if (sum > UINT_MAX)
+		return (0);
+
 	return (sum);
 }
