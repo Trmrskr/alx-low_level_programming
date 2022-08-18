@@ -33,8 +33,5 @@ unsigned int binary_to_uint(const char *b)
 		sum += num * pow;
 	}
 
-	if (sum > UINT_MAX)
-		return (0);
-
 	return (sum);
 }
