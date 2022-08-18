@@ -13,7 +13,7 @@ unsigned int binary_to_uint(const char *b)
 	int pow, b_len, i, num;
 	unsigned int sum;
 
-	if (b == NULL)
+	if (b == NULL || b[0] == '\0')
 		return (0);
 
 	pow = 1;
@@ -28,7 +28,7 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = b_len - 1; i >= 0; i--)
 	{
-		pow *= 2;
+		pow <<= 1;
 		num = b[i] - '0';
 		sum += num * pow;
 	}
