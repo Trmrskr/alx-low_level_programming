@@ -18,7 +18,7 @@ unsigned int binary_to_uint(const char *b)
 	pow = 1;
 	b_len = strlen(b) - 1;
 
-	if (b_len > 32)
+	if (b_len > 64)
 		return (0);
 
 	for (i = 0; i < b_len; i++)
