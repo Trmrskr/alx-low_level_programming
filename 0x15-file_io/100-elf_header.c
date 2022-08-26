@@ -84,10 +84,10 @@ void print_data(unsigned char *e_ident)
 			printf("none\n");
 			break;
 		case ELFDATA2LSB:
-			printf("2's complement, little-endian\n");
+			printf("2's complement, little endian\n");
 			break;
 		case ELFDATA2MSB:
-			printf("2's complement, big-endian\n");
+			printf("2's complement, big endian\n");
 			break;
 		default:
 			printf("Unknown DATA format\n");
@@ -126,37 +126,37 @@ void print_os(unsigned char *e_ident)
 	switch (e_ident[EI_OSABI])
 	{
 		case ELFOSABI_NONE | ELFOSABI_SYSV:
-			printf("Unix - System V\n");
+			printf("UNIX - System V\n");
 			break;
 		case ELFOSABI_HPUX:
-			printf("Unix - HP-UX\n");
+			printf("UNIX - HP-UX\n");
 			break;
 		case ELFOSABI_NETBSD:
-			printf("Unix - NetBSD\n");
+			printf("UNIX - NetBSD\n");
 			break;
 		case ELFOSABI_LINUX:
-			printf("Unix - Linux\n");
+			printf("UNIX - Linux\n");
 			break;
 		case ELFOSABI_SOLARIS:
-			printf("Unix - Solaris\n");
+			printf("UNIX - Solaris\n");
 			break;
 		case ELFOSABI_IRIX:
-			printf("Unix - IRIX\n");
+			printf("UNIX - IRIX\n");
 			break;
 		case ELFOSABI_FREEBSD:
-			printf("Unix - FREEBSD\n");
+			printf("UNIX - FREEBSD\n");
 			break;
 		case ELFOSABI_TRU64:
-			printf("Unix - TRU64\n");
+			printf("UNIX - TRU64\n");
 			break;
 		case ELFOSABI_ARM:
-			printf("Unix - ARM\n");
+			printf("UNIX - ARM\n");
 			break;
 		case ELFOSABI_STANDALONE:
 			printf("Stand-alone\n");
 			break;
 		default:
-			printf("<OS unknown>\n");
+			printf("<Unknown: %d>\n", e_ident[EI_OSABI]);
 			break;
 	}
 }
@@ -183,7 +183,7 @@ void print_type(unsigned int e_type)
 	switch (e_type)
 	{
 		case ET_NONE:
-			printf("Unknown type\n");
+			printf("<Unknown type>\n");
 			break;
 		case ET_REL:
 			printf("REL (Relocatable file)\n");
