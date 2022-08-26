@@ -5,6 +5,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <elf.h>
+#include <string.h>
 
 /**
  * test_for_exec - test if a file is an elf file
@@ -272,7 +273,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	filename = argv[1];
+	filename = strdup(argv[1]);
 
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
