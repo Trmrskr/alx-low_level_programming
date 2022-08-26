@@ -30,7 +30,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int i;
 
-	printf("  Magic:      ");
+	printf("  Magic:                             ");
 
 	for (i = 0; i < EI_NIDENT; i++)
 	{
@@ -50,7 +50,7 @@ void print_magic(unsigned char *e_ident)
 
 void print_class(unsigned char *e_ident)
 {
-	printf("  Class:          ");
+	printf("  Class:                             ");
 
 	switch (e_ident[EI_CLASS])
 	{
@@ -75,7 +75,7 @@ void print_class(unsigned char *e_ident)
 
 void print_data(unsigned char *e_ident)
 {
-	printf("  Data:            ");
+	printf("  Data:                              ");
 
 	switch (e_ident[EI_DATA])
 	{
@@ -100,7 +100,7 @@ void print_data(unsigned char *e_ident)
 
 void print_version(unsigned char *e_ident)
 {
-	printf("  Version:      ");
+	printf("  Version:                           ");
 	switch (e_ident[EI_VERSION])
 	{
 		case EV_NONE:
@@ -121,7 +121,7 @@ void print_version(unsigned char *e_ident)
 
 void print_os(unsigned char *e_ident)
 {
-	printf("  OS/ABI:             ");
+	printf("  OS/ABI:                            ");
 	switch(e_ident[EI_OSABI])
 	{
 		case ELFOSABI_NONE | ELFOSABI_SYSV:
@@ -167,7 +167,8 @@ void print_os(unsigned char *e_ident)
 
 void print_abi_version(unsigned char *e_ident)
 {
-	printf("ABI Version:              %d\n", e_ident[EI_ABIVERSION]);
+	printf("  ABI Version:                       %d\n",
+e_ident[EI_ABIVERSION]);
 }
 
 /**
@@ -177,7 +178,7 @@ void print_abi_version(unsigned char *e_ident)
 
 void print_type(unsigned int e_type)
 {
-	printf("  Type:              ");
+	printf("  Type:                              ");
 	switch(e_type)
 	{
 		case ET_NONE:
@@ -207,7 +208,7 @@ void print_type(unsigned int e_type)
 
 void print_entry(unsigned long int entry)
 {
-	printf("Entry point address:                ");
+	printf("  Entry point address:               ");
 	printf("%#lx\n", entry);
 }
 
