@@ -14,7 +14,7 @@
 
 void test_for_exec(unsigned char *e_ident)
 {
-	if (e_ident[EI_MAG0] != ELFMAG0 && e_ident[EI_MAG1] != ELFMAG1 && 
+	if (e_ident[EI_MAG0] != ELFMAG0 && e_ident[EI_MAG1] != ELFMAG1 &&
 e_ident[EI_MAG2] != ELFMAG2 && e_ident[EI_MAG3] != ELFMAG3)
 	{
 		dprintf(STDERR_FILENO, "file is not an executable\n");
@@ -123,7 +123,7 @@ void print_version(unsigned char *e_ident)
 void print_os(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
-	switch(e_ident[EI_OSABI])
+	switch (e_ident[EI_OSABI])
 	{
 		case ELFOSABI_NONE | ELFOSABI_SYSV:
 			printf("Unix - System V\n");
@@ -163,7 +163,7 @@ void print_os(unsigned char *e_ident)
 
 /**
  * print_abi_version - a function to print abi version
- * @e_ident - an array of elf file header details
+ * @e_ident: an array of elf file header details
  */
 
 void print_abi_version(unsigned char *e_ident)
@@ -180,7 +180,7 @@ e_ident[EI_ABIVERSION]);
 void print_type(unsigned int e_type)
 {
 	printf("  Type:                              ");
-	switch(e_type)
+	switch (e_type)
 	{
 		case ET_NONE:
 			printf("Unknown type\n");
@@ -215,6 +215,7 @@ void print_entry(unsigned long int entry)
 
 /**
  * close_elf - a function to close elf file
+ * @fd: file descriptor
  */
 
 void close_elf(int fd)
@@ -229,10 +230,13 @@ void close_elf(int fd)
 }
 
 /**
- * print_header - print the content of header
+ * print_elf_header - print the content of header
+ * @elf_header: the header contain the header content of the elf file
+ * @filename: name of executable file
+ * @fd: file descriptor
  */
 
-void print_elf_header(Elf64_Ehdr * elf_header, char *filename, int fd)
+void print_elf_header(Elf64_Ehdr *elf_header, char *filename, int fd)
 {
 	printf("ELF Header:\n");
 	print_magic(elf_header->e_ident);
@@ -263,7 +267,8 @@ int main(int argc, char *argv[])
 	elf_header = malloc(sizeof(Elf64_Ehdr));
 	if (elf_header == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Cannot allocate space for elf header structure\n");
+		dprintf(STDERR_FILENO,
+"Error: Cannot allocate space for elf header structure\n");
 		exit(98);
 	}
 
