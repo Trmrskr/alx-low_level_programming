@@ -205,10 +205,10 @@ void print_type(unsigned int e_type)
  * @entry: entry point address of elf file
  */
 
-void print_entry(unsigned int entry)
+void print_entry(unsigned long int entry)
 {
 	printf("Entry point address:                ");
-	printf("%x\n", entry);
+	printf("%#lx\n", entry);
 }
 
 /**
