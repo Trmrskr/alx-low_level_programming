@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	dlistint_t *head;
+	dlistint_t *head, *node;
 
 	head = NULL;
 	add_dnodeint_end(&head, 0);
