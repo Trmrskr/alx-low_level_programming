@@ -38,7 +38,7 @@ unsigned int idx, int n)
 	if (hd == NULL)
 	{
 		if (idx == index)
-		{	
+		{
 			if (prev_node != NULL)
 				prev_node->next = new_node;
 			new_node->prev = prev_node;
