@@ -14,6 +14,8 @@ unsigned int index)
 	dlistint_t *prev_node = NULL, *hd = NULL, *tmp = NULL;
 	unsigned int idx = 0;
 
+	if (index < 0)
+		return (-1);
 	hd = *head;
 	while (hd != NULL)
 	{
