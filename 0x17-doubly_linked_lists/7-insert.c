@@ -35,12 +35,15 @@ unsigned int idx, int n)
 		prev_node = hd;
 		hd = hd->next;
 	}
-	if (hd == NULL && idx == index)
+	if (hd == NULL)
 	{
-		new_node->prev = prev_node;
-		new_node->next = NULL;
-		if (idx == 0)
-			hd = new_node;
+		if (idx == index)
+		{
+			if (prev_node != NULL)
+				prev_node->next = new_node;
+			new_node->prev = prev_node;
+			new_node->next = NULL;
+		}
 	}
 	return (new_node);
 }
