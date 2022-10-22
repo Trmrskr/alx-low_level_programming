@@ -1,5 +1,5 @@
-#ifndef HASH_H
-#define HASH_H
+#ifndef HASH_TABLES_H
+#define HASH_TABLES_H
 
 /**
  * struct hash_node_s - Node of a hash table
@@ -20,6 +20,7 @@ typedef struct hash_node_s
 /**
  * struct hash_table_s - Hash table data structure
  * @size: the size of the array
+ * @array: An array of size @size
  * Each cell of this array is a pointer to the first node of a linked list,
  * because we want our HashTable to use a Chaining collision handling
  */
@@ -30,4 +31,4 @@ typedef struct hash_table_s
 	hash_node_t **array;
 } hash_table_t;
 
-#endif /* HASH_H */
+#endif /* HASH_TABLES_H */
