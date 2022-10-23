@@ -15,9 +15,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node, *new_node;
 	int idx = key_index((const unsigned char *)key, ht->size);
 
-	if (key == NULL || *key == '\0')
-		return (0);
-	if (value == NULL || *value == '\0')
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL ||
+*value == '\0')
 		return (0);
 
 	new_node = malloc(sizeof(hash_node_t));
