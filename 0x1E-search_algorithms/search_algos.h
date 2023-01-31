@@ -26,7 +26,7 @@ typedef struct listint_s
  * @n: Integer
  * @index: Index of the node in the list
  * @next: Pointer to the next node
- * express: Pointer to the next node in the express line
+ * @express: Pointer to the next node in the express line
  * Description: singly linked list node structure with an express lane
  * for Holberton project
  */
